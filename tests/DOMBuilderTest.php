@@ -1,10 +1,10 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests;
+namespace GroundSix\Feeds\Tests;
 
 use DOMDocument;
 use DOMElement;
-use Jmsfwk\Feeds\DOMBuilder;
+use GroundSix\Feeds\DOMBuilder;
 use PHPUnit\Framework\TestCase;
 
 class DOMBuilderTest extends TestCase

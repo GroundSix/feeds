@@ -1,15 +1,15 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests\Rss;
+namespace GroundSix\Feeds\Tests\Rss;
 
 use DateTime;
 use DOMDocument;
 use InvalidArgumentException;
-use Jmsfwk\Feeds\DOMBuilder;
-use Jmsfwk\Feeds\Rss\Item;
-use Jmsfwk\Feeds\Rss\Item\Enclosure;
-use Jmsfwk\Feeds\Rss\Item\Guid;
-use Jmsfwk\Feeds\Rss\Item\Source;
+use GroundSix\Feeds\DOMBuilder;
+use GroundSix\Feeds\Rss\Item;
+use GroundSix\Feeds\Rss\Item\Enclosure;
+use GroundSix\Feeds\Rss\Item\Guid;
+use GroundSix\Feeds\Rss\Item\Source;
 use PHPUnit\Framework\TestCase;
 
 class ItemTest extends TestCase

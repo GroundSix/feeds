@@ -1,11 +1,11 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests\Rss;
+namespace GroundSix\Feeds\Tests\Rss;
 
 use DOMDocument;
-use Jmsfwk\Feeds\Rss\Channel;
-use Jmsfwk\Feeds\Rss\Rss;
-use Jmsfwk\Feeds\Rss\Rss2;
+use GroundSix\Feeds\Rss\Channel;
+use GroundSix\Feeds\Rss\Rss;
+use GroundSix\Feeds\Rss\Rss2;
 use PHPUnit\Framework\TestCase;
 
 class Rss2Test extends TestCase

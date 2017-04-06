@@ -1,6 +1,6 @@
 <?php
 
-namespace Jmsfwk\Feeds\Rss\Item;
+namespace GroundSix\Feeds\Rss\Item;
 
 class Category
 {

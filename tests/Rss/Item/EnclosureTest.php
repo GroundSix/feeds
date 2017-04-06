@@ -1,8 +1,8 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests\Rss\Item;
+namespace GroundSix\Feeds\Tests\Rss\Item;
 
-use Jmsfwk\Feeds\Rss\Item\Enclosure;
+use GroundSix\Feeds\Rss\Item\Enclosure;
 use PHPUnit\Framework\TestCase;
 
 class EnclosureTest extends TestCase

@@ -1,8 +1,8 @@
 <?php
-namespace Jmsfwk\Feeds\Tests\Rss;
+namespace GroundSix\Feeds\Tests\Rss;
 
 use InvalidArgumentException;
-use Jmsfwk\Feeds\Rss\Image;
+use GroundSix\Feeds\Rss\Image;
 use PHPUnit\Framework\TestCase;
 use Traversable;
 

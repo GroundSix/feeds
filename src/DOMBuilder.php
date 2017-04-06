@@ -1,6 +1,6 @@
 <?php
 
-namespace Jmsfwk\Feeds;
+namespace GroundSix\Feeds;
 
 use DOMDocument;
 use DOMElement;

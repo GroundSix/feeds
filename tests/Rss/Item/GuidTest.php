@@ -1,8 +1,8 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests\Rss\Item;
+namespace GroundSix\Feeds\Tests\Rss\Item;
 
-use Jmsfwk\Feeds\Rss\Item\Guid;
+use GroundSix\Feeds\Rss\Item\Guid;
 use PHPUnit\Framework\TestCase;
 
 class GuidTest extends TestCase

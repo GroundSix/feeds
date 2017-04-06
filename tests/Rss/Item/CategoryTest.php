@@ -1,8 +1,8 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests\Rss\Item;
+namespace GroundSix\Feeds\Tests\Rss\Item;
 
-use Jmsfwk\Feeds\Rss\Item\Category;
+use GroundSix\Feeds\Rss\Item\Category;
 use PHPUnit\Framework\TestCase;
 
 class CategoryTest extends TestCase

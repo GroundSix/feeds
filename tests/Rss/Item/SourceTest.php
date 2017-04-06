@@ -1,8 +1,8 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests\Rss\Item;
+namespace GroundSix\Feeds\Tests\Rss\Item;
 
-use Jmsfwk\Feeds\Rss\Item\Source;
+use GroundSix\Feeds\Rss\Item\Source;
 use PHPUnit\Framework\TestCase;
 
 class SourceTest extends TestCase

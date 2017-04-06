@@ -1,14 +1,14 @@
 <?php
 
-namespace Jmsfwk\Feeds\Tests\Rss;
+namespace GroundSix\Feeds\Tests\Rss;
 
 use DOMDocument;
 use DOMElement;
-use Jmsfwk\Feeds\DOMBuilder;
-use Jmsfwk\Feeds\Rss\Channel;
-use Jmsfwk\Feeds\Rss\Image;
-use Jmsfwk\Feeds\Rss\Item;
-use Jmsfwk\Feeds\Rss\Rss;
+use GroundSix\Feeds\DOMBuilder;
+use GroundSix\Feeds\Rss\Channel;
+use GroundSix\Feeds\Rss\Image;
+use GroundSix\Feeds\Rss\Item;
+use GroundSix\Feeds\Rss\Rss;
 use PHPUnit\Framework\TestCase;
 use PHPUnit_Framework_Constraint_IsInstanceOf as IsInstanceOf;
 

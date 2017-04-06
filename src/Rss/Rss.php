@@ -1,10 +1,10 @@
 <?php
 
-namespace Jmsfwk\Feeds\Rss;
+namespace GroundSix\Feeds\Rss;
 
 use DOMDocument;
 use DOMElement;
-use Jmsfwk\Feeds\DOMBuilder;
+use GroundSix\Feeds\DOMBuilder;
 
 abstract class Rss
 {

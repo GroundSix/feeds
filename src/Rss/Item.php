@@ -1,14 +1,14 @@
 <?php
 
-namespace Jmsfwk\Feeds\Rss;
+namespace GroundSix\Feeds\Rss;
 
 use DateTimeInterface;
 use DOMElement;
 use InvalidArgumentException;
-use Jmsfwk\Feeds\DOMBuilder;
-use Jmsfwk\Feeds\Rss\Item\Enclosure;
-use Jmsfwk\Feeds\Rss\Item\Guid;
-use Jmsfwk\Feeds\Rss\Item\Source;
+use GroundSix\Feeds\DOMBuilder;
+use GroundSix\Feeds\Rss\Item\Enclosure;
+use GroundSix\Feeds\Rss\Item\Guid;
+use GroundSix\Feeds\Rss\Item\Source;
 
 class Item implements ItemBuilder
 {

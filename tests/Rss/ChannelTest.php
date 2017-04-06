@@ -1,8 +1,8 @@
 <?php
-namespace Jmsfwk\Feeds\Tests\Rss;
+namespace GroundSix\Feeds\Tests\Rss;
 
-use Jmsfwk\Feeds\Rss\Channel;
-use Jmsfwk\Feeds\Rss\Image;
+use GroundSix\Feeds\Rss\Channel;
+use GroundSix\Feeds\Rss\Image;
 use PHPUnit\Framework\TestCase;
 use Traversable;
 

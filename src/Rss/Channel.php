@@ -1,6 +1,6 @@
 <?php
 
-namespace Jmsfwk\Feeds\Rss;
+namespace GroundSix\Feeds\Rss;
 
 use ArrayIterator;
 use IteratorAggregate;
