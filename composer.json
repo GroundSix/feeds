@@ -22,5 +22,8 @@
       "Jmsfwk\\Feeds\\Tests\\": "tests"
     }
   },
-  "require": {}
+  "require": {
+    "php" : "^7.1",
+    "ext-dom": "*"
+  }
 }
