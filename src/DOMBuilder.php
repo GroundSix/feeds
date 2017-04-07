@@ -2,6 +2,7 @@
 
 namespace GroundSix\Feeds;
 
+use DOMCdataSection;
 use DOMDocument;
 use DOMElement;
 
@@ -27,5 +28,10 @@ final class DOMBuilder
         }
 
         return $element;
+    }
+
+    public function createCDATASection(string $data): DOMCdataSection
+    {
+        return $this->dom->createCDATASection($data);
     }
 }

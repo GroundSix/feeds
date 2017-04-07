@@ -2,6 +2,7 @@
 
 namespace GroundSix\Feeds\Tests;
 
+use DOMCdataSection;
 use DOMDocument;
 use DOMElement;
 use GroundSix\Feeds\DOMBuilder;
@@ -32,6 +33,15 @@ class DOMBuilderTest extends TestCase
         $element = $this->builder->createElement('name', '&');
 
         $this->assertEquals('&', $element->nodeValue);
+    }
+
+    public function test_it_can_make_a_cdata_section()
+    {
+        $data = '<p>&</p>';
+        $cdata = $this->builder->createCDATASection($data);
+
+        $this->assertInstanceOf(DOMCdataSection::class, $cdata);
+        $this->assertEquals($data, $cdata->textContent);
     }
 
     public function setUp()

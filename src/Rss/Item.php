@@ -2,6 +2,7 @@
 
 namespace GroundSix\Feeds\Rss;
 
+use const DATE_RFC822;
 use DateTimeInterface;
 use DOMElement;
 use InvalidArgumentException;
@@ -48,11 +49,16 @@ class Item implements ItemBuilder
 
     public function addFields(DOMElement $item, DOMBuilder $builder)
     {
-        $stringFields = ['title', 'comments', 'description', 'link'];
+        $stringFields = ['title', 'comments', 'link'];
         foreach ($stringFields as $field) {
             if (null !== $this->$field) {
                 $item->appendChild($builder->createElement($field, $this->$field));
             }
+        }
+        if (null !== $this->description) {
+            $description = $builder->createElement('description');
+            $description->appendChild($builder->createCDATASection($this->description));
+            $item->appendChild($description);
         }
     }
 

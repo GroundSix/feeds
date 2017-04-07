@@ -3,6 +3,7 @@
 namespace GroundSix\Feeds\Tests\Rss;
 
 use DateTime;
+use DOMCdataSection;
 use DOMDocument;
 use InvalidArgumentException;
 use GroundSix\Feeds\DOMBuilder;
@@ -26,6 +27,19 @@ class ItemTest extends TestCase
         $this->item->addFields($item, new DOMBuilder($dom));
 
         $this->assertGreaterThan(0, $item->childNodes->length);
+    }
+
+    public function test_it_adds_the_value_of_description_as_a_cdata_section()
+    {
+        $dom = new DOMDocument();
+        $item = $dom->createElement('item');
+
+        $this->item->addFields($item, new DOMBuilder($dom));
+        $description = $item->getElementsByTagName('description');
+
+        $this->assertEquals(1, $description->length);
+        $this->assertEquals(1, $description->item(0)->childNodes->length);
+        $this->assertInstanceOf(DOMCdataSection::class, $description->item(0)->childNodes->item(0));
     }
 
     public function test_it_cannot_be_initialised_without_either_title_or_description()
