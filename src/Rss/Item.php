@@ -60,6 +60,16 @@ class Item implements ItemBuilder
             $description->appendChild($builder->createCDATASection($this->description));
             $item->appendChild($description);
         }
+        if (null !== $this->guid) {
+            $guid = $builder->createElement('guid', $this->guid->getGuid());
+            if ($this->guid->isPermaLink() === false) {
+                $guid->setAttribute('isPermaLink', $this->guid->isPermaLink());
+            }
+            $item->appendChild($guid);
+        }
+        if (null !== $this->pubDate) {
+            $item->appendChild($builder->createElement('pubDate', $this->pubDate->format(DATE_RFC822)));
+        }
     }
 
     /**
