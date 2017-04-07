@@ -48,7 +48,12 @@ class Item implements ItemBuilder
 
     public function addFields(DOMElement $item, DOMBuilder $builder)
     {
-        $item->appendChild($builder->createElement('title', $this->title));
+        $stringFields = ['title', 'comments', 'description', 'link'];
+        foreach ($stringFields as $field) {
+            if (null !== $this->$field) {
+                $item->appendChild($builder->createElement($field, $this->$field));
+            }
+        }
     }
 
     /**
