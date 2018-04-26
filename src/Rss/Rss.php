@@ -48,10 +48,19 @@ abstract class Rss
         }
     }
 
+    protected function getNamespaces(): array
+    {
+        return [];
+    }
+
     private function createRoot()
     {
         $rss = $this->dom->createElement('rss');
         $rss->setAttribute('version', static::VERSION);
+
+        foreach ($this->getNamespaces() as $prefix => $namespace) {
+            $rss->setAttribute('xmlns:' . $prefix, $namespace);
+        }
 
         $this->dom->appendChild($rss);
     }
