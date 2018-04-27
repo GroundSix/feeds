@@ -2,6 +2,7 @@
 
 namespace GroundSix\Feeds\Rss;
 
+use const DATE_RFC1123;
 use const DATE_RFC822;
 use DateTimeInterface;
 use DOMElement;
@@ -68,7 +69,7 @@ class Item implements ItemBuilder
             $item->appendChild($guid);
         }
         if (null !== $this->pubDate) {
-            $item->appendChild($builder->createElement('pubDate', $this->pubDate->format(DATE_RFC822)));
+            $item->appendChild($builder->createElement('pubDate', $this->pubDate->format(DATE_RFC1123)));
         }
     }
 

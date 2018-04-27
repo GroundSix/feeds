@@ -144,6 +144,20 @@ class ItemTest extends TestCase
         $this->assertEquals('false', $attribute->nodeValue, 'When Guid is not a permalink the `isPermaLink` attribute should have the value `false`.');
     }
 
+    /** @test */
+    public function AddFields__PubDate__Uses4DigitYear()
+    {
+        $date = new \DateTime('2018-04-27 12:00:00+00:00');
+        $this->item->setPubDate($date);
+
+        $element = $this->buildItem();
+
+        /** @var DOMElement $pubDate */
+        $pubDate = $element->getElementsByTagName('pubDate')[0];
+
+        $this->assertEquals('Fri, 27 Apr 2018 12:00:00 +0000', $pubDate->nodeValue, 'PubDate should use 4 digit year.');
+    }
+
     public function fields()
     {
         return [
