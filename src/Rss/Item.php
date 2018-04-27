@@ -63,7 +63,7 @@ class Item implements ItemBuilder
         if (null !== $this->guid) {
             $guid = $builder->createElement('guid', $this->guid->getGuid());
             if ($this->guid->isPermaLink() === false) {
-                $guid->setAttribute('isPermaLink', $this->guid->isPermaLink());
+                $guid->setAttribute('isPermaLink', 'false');
             }
             $item->appendChild($guid);
         }

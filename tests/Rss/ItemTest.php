@@ -5,6 +5,7 @@ namespace GroundSix\Feeds\Tests\Rss;
 use DateTime;
 use DOMCdataSection;
 use DOMDocument;
+use DOMElement;
 use InvalidArgumentException;
 use GroundSix\Feeds\DOMBuilder;
 use GroundSix\Feeds\Rss\Item;
@@ -130,6 +131,19 @@ class ItemTest extends TestCase
         $this->assertEquals($field, $this->item->$getter());
     }
 
+    /** @test */
+    public function AddFields__GuidNotPermalink__isPermaLinkAttributeValueIsFalse()
+    {
+        $this->item->setGuid(new Guid('', false));
+
+        $item = $this->buildItem();
+        /** @var DOMElement $guid */
+        $guid = $item->getElementsByTagName('guid')[0];
+        $attribute = $guid->attributes->getNamedItem('isPermaLink');
+
+        $this->assertEquals('false', $attribute->nodeValue, 'When Guid is not a permalink the `isPermaLink` attribute should have the value `false`.');
+    }
+
     public function fields()
     {
         return [
@@ -158,5 +172,16 @@ class ItemTest extends TestCase
     {
         parent::setUp();
         $this->item = new Item('', '');
+    }
+
+    private function buildItem(): DOMElement
+    {
+        $dom = new DOMDocument();
+        $builder = new DOMBuilder($dom);
+        $element = $dom->createElement('item');
+
+        $this->item->addFields($element, $builder);
+
+       return $element;
     }
 }
