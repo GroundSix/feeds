@@ -11,7 +11,7 @@ class ChannelTest extends TestCase
     /** @var Channel */
     private $channel;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->channel = new Channel('', '', '');

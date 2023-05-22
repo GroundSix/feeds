@@ -9,8 +9,8 @@ use GroundSix\Feeds\Rss\Channel;
 use GroundSix\Feeds\Rss\Image;
 use GroundSix\Feeds\Rss\Item;
 use GroundSix\Feeds\Rss\Rss;
+use PHPUnit\Framework\Constraint\IsInstanceOf;
 use PHPUnit\Framework\TestCase;
-use PHPUnit_Framework_Constraint_IsInstanceOf as IsInstanceOf;
 
 class RssX extends Rss {
     const VERSION ='x';
@@ -106,7 +106,7 @@ class RssTest extends TestCase
         $this->assertEquals(3, $images->item(0)->childNodes->length);
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         // Make a feed

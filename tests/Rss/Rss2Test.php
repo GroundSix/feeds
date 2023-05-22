@@ -20,7 +20,7 @@ class Rss2Test extends TestCase
         $this->assertEquals('2.0', $rss->getAttribute('version'));
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         // Make a feed

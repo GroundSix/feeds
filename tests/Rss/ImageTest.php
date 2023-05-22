@@ -11,7 +11,7 @@ class ImageTest extends TestCase
     /** @var Image */
     private $image;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->image = new Image('some url', '', '');

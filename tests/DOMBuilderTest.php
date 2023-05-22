@@ -44,7 +44,7 @@ class DOMBuilderTest extends TestCase
         $this->assertEquals($data, $cdata->textContent);
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->builder = new DOMBuilder(new DOMDocument());
